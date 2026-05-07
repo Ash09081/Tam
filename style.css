@@ -385,21 +385,6 @@ body {
   margin-top: 10px;
 }
 
-/* ✅ MOBILE RESPONSIVE */
-
-@media (max-width: 900px) {
-  .sites {
-    grid-template-columns: repeat(2, 1fr);
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .sites {
-    grid-template-columns: 1fr;
-  }
-}
-
 .hero-box {
   padding: 1.5rem;
 }
@@ -460,59 +445,99 @@ body {
 #lightbox.show img {
   transform: scale(1); /* zoom in */
 }
-
-@media (max-width: 600px) {
+/* ✅ VERY SMALL PHONES (iPhone SE, old Android) */
+@media (max-width: 480px) {
   body {
-    padding-top: 100px; /* ✅ more space for navbar */
+    padding-top: 110px;
+  }
+
+  .navbar {
+    height: 65px;
+    padding: 0 10px;
+  }
+
+  .nav-center {
+    font-size: 0.85rem;
+  }
+
+  .nav-left span {
+    font-size: 0.7rem;
+  }
+
+  .hero {
+    min-height: 35vh;
+    padding: 1rem;
+  }
+
+  .hero-box {
+    padding: 1rem;
+  }
+
+  .hero-box h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-box p {
+    font-size: 0.8rem;
+  }
+
+  .sites {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .site-card {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .site-card img {
+    height: 140px;
   }
 }
 
+/* ✅ PHONES (iPhone, Samsung, most devices) */
 @media (max-width: 600px) {
+  body {
+    padding-top: 100px;
+  }
+
   .navbar {
     height: 70px;
     padding: 0 1rem;
   }
 
   .nav-center {
-    font-size: 1rem; /* smaller title */
+    font-size: 1rem;
   }
 
-  .nav-left span {
-    font-size: 0.8rem;
+  .hero {
+    min-height: 40vh;
   }
-}
 
-
-@media (max-width: 600px) {
   .hero-box h1 {
     font-size: 1.4rem;
-    text-align: center;
   }
 
   .hero-box p {
     font-size: 0.95rem;
   }
-}
 
-@media (max-width: 600px) {
-  .hero {
-    padding: 1rem;
+  .sites {
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
-}
 
-
-@media (max-width: 600px) {
   .site-card {
-    width: 100%;
     max-width: 320px;
     margin: auto;
   }
 }
-
+/* ✅ TABLETS (iPad, Android tablets) */
 @media (max-width: 1024px) {
   .sites {
-    grid-template-columns: repeat(2, 280px); /* ✅ 2 columns */
-    justify-content: center; /* ✅ center for tablet */
+    grid-template-columns: repeat(2, 280px);
+    justify-content: center;
     margin-right: 0;
   }
 
@@ -524,4 +549,14 @@ body {
     font-size: 1.1rem;
   }
 }
+/* ✅ LARGE SCREENS (big laptops / desktops) */
+@media (min-width: 1200px) {
+  .sites {
+    grid-template-columns: repeat(3, 300px);
+    justify-content: end;
+  }
 
+  .hero-box h1 {
+    font-size: 3.5rem;
+  }
+}
