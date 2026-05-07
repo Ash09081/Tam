@@ -6,7 +6,7 @@ const modal = document.getElementById("modal");
 const lightbox = document.getElementById("lightbox");
 
 // ✅ CLICK CARDS
-document.querySelectorAll(".site-card").forEach(card => {
+document.querySelectorAll(".site-card").forEach((card) => {
   card.addEventListener("click", () => openModal(card));
 });
 
@@ -24,7 +24,7 @@ function openModal(card) {
 
   const images = card.dataset.images
     .split("|")
-    .filter(item => item.trim() !== "");
+    .filter((item) => item.trim() !== "");
 
   for (let i = 0; i < images.length; i += 2) {
     const imgSrc = images[i];
@@ -37,22 +37,18 @@ function openModal(card) {
     img.alt = caption.trim();
 
     // ✅ CLICK IMAGE → SHOW FULL IMAGE
-    
 
+    img.addEventListener("click", (e) => {
+      e.stopPropagation(); // ✅ stops modal interfering
 
-img.addEventListener("click", (e) => {
-  e.stopPropagation(); // ✅ stops modal interfering
+      const lightboxImg = document.getElementById("lightboxImg");
+      const caption = document.getElementById("lightboxCaption");
 
-  const lightboxImg = document.getElementById("lightboxImg");
-  const caption = document.getElementById("lightboxCaption");
+      lightboxImg.src = img.src;
+      caption.textContent = img.alt;
 
-  lightboxImg.src = img.src;
-  caption.textContent = img.alt;
-
-  lightbox.style.display = "flex";
-});
-
-
+      lightbox.style.display = "flex";
+    });
 
     gallery.appendChild(img);
   }
@@ -67,14 +63,11 @@ document.getElementById("closeModal").onclick = () => {
 
 // ✅ CLOSE WHEN CLICK OUTSIDE MODAL
 
-
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("show");
   }
 });
-
-
 
 // ✅ ESC KEY CLOSE
 document.addEventListener("keydown", (e) => {
