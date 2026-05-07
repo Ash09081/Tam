@@ -486,7 +486,7 @@ body {
 
   /* ✅ HERO SECTION FIX */
   .hero {
-    min-height: 35vh;
+    min-height: 30vh;
     padding: 1rem;
   }
 
@@ -495,24 +495,24 @@ body {
   }
 
   .hero-box h1 {
-    font-size: 1.4rem; /* smaller title */
+    font-size: 1rem; /* smaller title */
     text-align: center;
   }
 
   .hero-box p {
-    font-size: 0.85rem; /* smaller paragraph */
-    line-height: 1.4;
-  }
+    font-size: 0.4rem; /* smaller paragraph */
+    line-height: 0.8;
+  } 
 
   /* ✅ CARD LAYOUT FIX */
   .sites {
     grid-template-columns: 1fr;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .site-card {
-    max-width: 90%;
+    max-width: 60%;
     margin: auto;
   }
 
