@@ -445,25 +445,46 @@ body {
 #lightbox.show img {
   transform: scale(1); /* zoom in */
 }
-/* ✅ VERY SMALL PHONES (iPhone SE, old Android) */
+/* ✅ VERY SMALL PHONES */
 @media (max-width: 480px) {
-  body {
-    padding-top: 110px;
+
+  .hero-box h1 {
+    font-size: 1.2rem;
   }
 
+  .hero-box p {
+    font-size: 0.8rem;
+  }
+
+  .site-card {
+    max-width: 95%;
+  }
+}
+
+/* ✅ PHONES (iPhone, Samsung, most devices) */
+/* ✅ PHONE FIX (iPhone 13 and others) */
+@media (max-width: 600px) {
+
+  body {
+    padding-top: 110px; /* prevents navbar overlap */
+  }
+
+  /* ✅ NAVBAR */
   .navbar {
-    height: 65px;
+    height: 70px;
     padding: 0 10px;
   }
 
   .nav-center {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   .nav-left span {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
+  /* ✅ HERO SECTION FIX */
   .hero {
     min-height: 35vh;
     padding: 1rem;
@@ -474,65 +495,32 @@ body {
   }
 
   .hero-box h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* smaller title */
+    text-align: center;
   }
 
   .hero-box p {
-    font-size: 0.8rem;
+    font-size: 0.85rem; /* smaller paragraph */
+    line-height: 1.4;
   }
 
+  /* ✅ CARD LAYOUT FIX */
   .sites {
     grid-template-columns: 1fr;
     justify-content: center;
+    gap: 1.5rem;
   }
 
   .site-card {
-    max-width: 280px;
+    max-width: 90%;
     margin: auto;
   }
 
   .site-card img {
-    height: 140px;
+    height: 150px;
   }
 }
 
-/* ✅ PHONES (iPhone, Samsung, most devices) */
-@media (max-width: 600px) {
-  body {
-    padding-top: 100px;
-  }
-
-  .navbar {
-    height: 70px;
-    padding: 0 1rem;
-  }
-
-  .nav-center {
-    font-size: 1rem;
-  }
-
-  .hero {
-    min-height: 40vh;
-  }
-
-  .hero-box h1 {
-    font-size: 1.4rem;
-  }
-
-  .hero-box p {
-    font-size: 0.95rem;
-  }
-
-  .sites {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  .site-card {
-    max-width: 320px;
-    margin: auto;
-  }
-}
 /* ✅ TABLETS (iPad, Android tablets) */
 @media (max-width: 1024px) {
   .sites {
