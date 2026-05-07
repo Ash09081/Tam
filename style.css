@@ -128,31 +128,29 @@ body {
 
 
 
+
 .hero-box {
   background: linear-gradient(
-    to right,
-    rgba(222, 188, 128, 0.95),  /* warm gold */
-    rgba(201, 160, 92, 0.95)    /* deeper brownish gold */
+    to bottom,
+    #f6e7c9,   /* light beige */
+    #e9d3a5    /* deeper antique tone */
   );
 
-  border: 1px solid #b8944e;
+  border: 1px solid #a67c2d;
 
   padding: 1.5rem 2rem;
   border-radius: 18px;
 
   box-shadow: 
-    0 10px 30px rgba(0,0,0,0.35),
-    inset 0 0 12px rgba(255,255,255,0.2);
+    0 12px 35px rgba(0,0,0,0.35),
+    inset 0 0 15px rgba(255,255,255,0.25);
 }
-
-
-
-
 
 .hero-box h1,
 .hero-box p {
-  color: #2e2217; /* dark brown text */
+  color: #2b1e13;
 }
+
 
 
 
@@ -203,8 +201,8 @@ body {
 .site-card {
   background: linear-gradient(
     to bottom,
-    #e5cc9a,   /* light warm beige */
-    #d4b67a    /* deeper gold tone */
+    #f6e7c9,   /* light beige */
+    #e9d3a5    /* deeper antique tone */
   );
 
   border-radius: 15px;
