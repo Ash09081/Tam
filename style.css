@@ -466,7 +466,7 @@ body {
 @media (max-width: 600px) {
 
   body {
-    padding-top: 110px; /* prevents navbar overlap */
+    padding-top: 110px;
   }
 
   /* ✅ NAVBAR */
@@ -477,43 +477,50 @@ body {
 
   .nav-center {
     font-size: 1rem;
-    line-height: 1.2;
+    text-align: center;
   }
 
   .nav-left span {
     font-size: 0.8rem;
   }
 
-  /* ✅ HERO SECTION FIX */
+  /* ✅ HERO FIX */
   .hero {
-    min-height: 30vh;
+    min-height: auto;
     padding: 10px;
   }
 
   .hero-box {
-    padding: 1rem;
+    padding: 12px;
   }
 
+  /* ✅ FIX TITLE SIZE */
   .hero-box h1 {
-    
- font-size: 14px;   /* title smaller */
-    line-height: 1.2;
-
+    font-size: 1.3rem;        /* ✅ smaller clean */
+    line-height: 1.3;
+    text-align: center;       /* ✅ centered */
   }
 
+  /* ✅ FIX PARAGRAPH */
   .hero-box p {
-     font-size: 12px; /* smaller paragraph */
-    line-height: 0.4rem;
-  } 
-
-  /* ✅ CARD LAYOUT FIX */
-  .sites {
-    grid-template-columns: 1fr;
-    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1.4;         /* ✅ FIXED spacing (your bug) */
+    text-align: center;
   }
 
+  /* ✅ VERY IMPORTANT — FORCE 1 COLUMN */
+  .sites {
+    display: grid;
+    grid-template-columns: 1fr !important;  /* ✅ FORCE */
+    justify-content: center;
+    gap: 1.5rem;
+    margin-right: 0;
+  }
+
+  /* ✅ CENTER CARDS */
   .site-card {
-    max-width: 95%;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
   }
 
