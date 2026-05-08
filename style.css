@@ -574,32 +574,32 @@ body {
 @media (min-width: 1025px) and (max-width: 1199px) {
   .sites {
     grid-template-columns: repeat(3, minmax(240px, 1fr));
-    justify-content: end;
-    margin-right: 3%;
+    justify-content: center;
+    margin-right: 0;
     gap: 1.5rem;
   }
 
   .hero {
-    padding: 0.75rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     min-height: auto;
   }
 
   .hero-box {
-    padding: 0.75rem 0.5rem;
-    max-width: 800px;
-    width: 85%;
+    padding: 0.5rem 0.75rem;
+    max-width: 700px;
+    width: 80%;
   }
 
   .hero-box h1 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.1;
     text-align: center;
   }
 
   .hero-box p {
-    font-size: 0.60rem;
+    font-size: 0.55rem;
     text-align: center;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
   }
 }
 
