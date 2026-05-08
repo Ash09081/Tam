@@ -575,31 +575,32 @@ body {
   .sites {
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     justify-content: center;
+    justify-items: center;
     margin-right: 0;
     gap: 1.5rem;
   }
 
   .hero {
-    padding: 0.5rem 0.5rem;
+    padding: 0.25rem 0.25rem;
     min-height: auto;
   }
 
   .hero-box {
-    padding: 0.5rem 0.75rem;
-    max-width: 700px;
-    width: 80%;
+    padding: 0.4rem 0.6rem;
+    max-width: 600px;
+    width: 75%;
   }
 
   .hero-box h1 {
-    font-size: 1.1rem;
+    font-size: 0.65rem;
     line-height: 1.1;
     text-align: center;
   }
 
   .hero-box p {
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
   }
 }
 
