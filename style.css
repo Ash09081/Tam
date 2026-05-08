@@ -539,63 +539,67 @@ body {
 /* ✅ TABLETS (iPad, Android tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .sites {
-    grid-template-columns: repeat(2, 280px);
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     justify-content: center;
     margin-right: 0;
+    gap: 1.5rem;
   }
 
-.hero {
+  .hero {
     min-height: auto;
-    padding: 10px;
+    padding: 1rem 0.80rem;
   }
 
   .hero-box {
-    padding: 15px;
+    padding: 0.90rem 1.25rem;
+    max-width: 700px;
+    width: 90%;
   }
 
-.hero-box h1 {
-    font-size: 1.0rem;        /* ✅ larger */
-    line-height: 1.3;
-    text-align: center;       /* ✅ centered */
-  }
-
-.hero-box p {
-    font-size: 1.0rem;
-    line-height: 1;         /* ✅ FIXED spacing (your bug) */
+  .hero-box h1 {
+    font-size: 1.5rem;
+    line-height: 1;
     text-align: center;
+  }
+
+  .hero-box p {
+    font-size: 0.95rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 0.75rem;
   }
 }
 
 /* ✅ LAPTOPS */
 @media (min-width: 1025px) and (max-width: 1199px) {
   .sites {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-    justify-content: center;
-    margin-right: 0;
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    justify-content: end;
+    margin-right: 3%;
+    gap: 1.5rem;
   }
 
   .hero {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
     min-height: auto;
   }
 
   .hero-box {
-    padding: 1.25rem 1.5rem;
-    max-width: 850px;
-    width: 90%;
+    padding: 1rem 1.25rem;
+    max-width: 800px;
+    width: 85%;
   }
 
   .hero-box h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 1.1;
     text-align: center;
   }
 
   .hero-box p {
-    font-size: 1.05rem;
+    font-size: 0.80rem;
     text-align: center;
-    margin-top: 0.85rem;
+    margin-top: 0.7rem;
   }
 }
 
